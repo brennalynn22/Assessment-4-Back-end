@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 const { getCompliment } = require('./controller');
-// const {getFortune} = require('./controller');
+const {getFortune} = require('./controller');
 const {getCustomers} = require('./controller');
 const {deleteCustomer} = require('./controller')
 const {createCustomer} = require('./controller');
@@ -16,9 +16,9 @@ const {updateCustomer} = require('./controller');
 
 
 app.get("/api/compliment", getCompliment);
-// app.get("/api/fortune", getFortune);
+app.get("/api/fortune", getFortune);
 app.get("/api/customers", getCustomers);
-app.delete('/api/customers/:id',deleteCustomer);
+app.delete('/api/customers/:id', deleteCustomer);
 app.post("/api/customers", createCustomer);
 app.put('/api/customers/:id', updateCustomer);
 

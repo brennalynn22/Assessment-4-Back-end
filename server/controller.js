@@ -53,12 +53,12 @@ module.exports = {
         res.status(200).send(randomCompliment);
     },
 
-    // getFortune: (req, res) => {
-    //     const fortunes= ["Adventure can be real happiness.","Every flower blooms in its own sweet time.", "Help! I am being held prisoner in a chinese bakery!", "Po Says: Pandas like eating bamboo, but I prefer mine dipped in chocolate.", "You are soon going to change your present line of work.", "Now is the time to try something new"];
+    getFortune: (req, res) => {
+        const fortunes= ["Adventure can be real happiness.","Every flower blooms in its own sweet time.", "Help! I am being held prisoner in a chinese bakery!", "Po Says: Pandas like eating bamboo, but I prefer mine dipped in chocolate.", "You are soon going to change your present line of work.", "Now is the time to try something new"];
 
-    //  let randomIndex = Math.floor(Math.random() * fortunes.length);
-    //     let randomFortune = fortunes[randomIndex];
+     let randomIndex = Math.floor(Math.random() * fortunes.length);
+        let randomFortune = fortunes[randomIndex];
       
-    //     res.status(200).send(randomFortune);
-    // },
+        res.status(200).send(randomFortune);
+    },
 }

@@ -4,5 +4,12 @@
         "name": "Steve Harrington",
         "email": "stevethehairH@hawkinshigh.edu",
         "Number of Bags": 2
+    },
+
+    {
+        "id":2,
+        "name": "Ron Weasley",
+        "email": "chudleycannons89@hogwarts.edu",
+        "Number of Bags": 1
     }
 ]
