@@ -2,14 +2,14 @@
     {
         "id":1,
         "name": "Steve Harrington",
-        "email": "stevethehairH@hawkinshigh.edu",
-        "Number of Bags": 2
+        "email": "stevethehairHarrington@hawkinshigh.edu",
+        "bagTotal": 2
     },
 
     {
         "id":2,
         "name": "Ron Weasley",
         "email": "chudleycannons89@hogwarts.edu",
-        "Number of Bags": 1
+        "bagTotal": 1
     }
 ]

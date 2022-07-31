@@ -1,5 +1,5 @@
 let customers = require('./db.json');
-let globalID=1;
+let globalID=3;
 
 module.exports = {
     getCustomers:(req,res) => {
@@ -14,11 +14,11 @@ module.exports = {
 //where were we suppose to console.log all 3 params query, body?
     createCustomer: (req, res) => {
         //console.log(req.body)
-        const {name,email, bagTotal } =req.body;//what does this do
-        let newCustomer ={
+        const {name, email, bagTotal} =req.body;//what does this do
+        let newCustomer = {
             id:globalID,
-            name,
-            email, 
+            name:name,
+            email:email, 
             bagTotal: +bagTotal,
         } 
         if (!name|| !email || !bagTotal){
@@ -33,10 +33,11 @@ module.exports = {
     updateCustomer: (req, res)=> {
         const {type}= req.body; //what is type
         let index = customers.findIndex(elem => elem.id === +req.params.id);
-        if (type === 'minus' && customers[index].bagTotal>0){
-            customers[index].bagTotal -=1;
+        if (type === 'minus' && customers[index].bagTotal > 0){
+            customers[index].bagTotal -= 1;
+            res.status(200).send(customers);///why was it not working w/o this
         } else if (type ==='plus'){
-            customers[index].bagTotal +=1; 
+            customers[index].bagTotal += 1; 
             res.status(200).send(customers);
             res.status(400).send ('Invalid');
         }

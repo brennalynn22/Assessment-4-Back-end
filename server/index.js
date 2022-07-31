@@ -7,7 +7,7 @@ app.use(cors());
 
 app.use(express.json());
 
-const { getCompliment } = require('./controller');
+const {getCompliment} = require('./controller');
 const {getFortune} = require('./controller');
 const {getCustomers} = require('./controller');
 const {deleteCustomer} = require('./controller')
