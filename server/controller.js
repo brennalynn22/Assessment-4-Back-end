@@ -17,8 +17,8 @@ module.exports = {
         const {name, email, bagTotal} =req.body;//what does this do
         let newCustomer = {
             id:globalID,
-            name:name,
-            email:email, 
+            name,
+            email,
             bagTotal: +bagTotal,
         } 
         if (!name|| !email || !bagTotal){
